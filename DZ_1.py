@@ -30,7 +30,7 @@ int_num = None
 while int_num != 5:
     try:
         int_num = entering_number()
-        if 0 < int_num <= 4:
+        if 0 < int_num <= 5:
             if int_num == 1:
                 if list_num:
                     os.system('cls')
