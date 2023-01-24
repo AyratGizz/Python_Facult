@@ -43,7 +43,7 @@ while int_num != 4:
                     continue
             elif int_num == 2:
                 os.system('cls')
-                list_num.insert(0, float(input("Введите число которое нужно добавить в список: ")))
+                list_num.append(float(input("Введите число которое нужно добавить в список: ")))
                 continue
             elif int_num == 3:
                 os.system('cls')
