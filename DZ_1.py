@@ -18,7 +18,8 @@ def entering_number():
                        '1. Просмотреть имеющийся список. \n'
                        '2. Добавить элемент в список. \n'
                        '3. Удалить элемент из списка. \n'
-                       '4. Выйти. \n'
+                       '4. Отсортировать список по возрастанию.'
+                       '5. Выйти. \n'
                        '\033[4m' + 'Введите номер действия:' + '\033[0m' + ' '))
     return number
 
@@ -26,7 +27,7 @@ def entering_number():
 list_num = []
 int_num = None
 
-while int_num != 4:
+while int_num != 5:
     try:
         int_num = entering_number()
         if 0 < int_num <= 4:
@@ -43,14 +44,21 @@ while int_num != 4:
                     continue
             elif int_num == 2:
                 os.system('cls')
-                list_num.append(float(input("Введите число которое нужно добавить в список: ")))
+                add_ind = int(input('Введите номер индекса, куда нужно добавить число: '))
+                list_num.insert(add_ind, float(input("Введите число которое нужно добавить в список: ")))
                 continue
             elif int_num == 3:
                 os.system('cls')
                 print_list(list_num)
-                list_num.remove(float(input("Введите число которое нужно удалить из списка: ")))
+                remove_ind = int(input('Введите номер индекса числа которое нужно удалить: '))
+                list_num.pop(remove_ind)
                 continue
             elif int_num == 4:
+                os.system('cls')
+                list_num.sort()
+                print_list(list_num)
+                continue
+            elif int_num == 5:
                 os.system('cls')
                 print('----- Вы вышли из программы! -----')
 
