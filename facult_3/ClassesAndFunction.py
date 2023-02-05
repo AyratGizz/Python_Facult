@@ -1,14 +1,19 @@
-def fun():
-    def fun_inside():
-        nonlocal n
-        n = 2
-        print(n)
+class Human:
+    # Конструктор объектов класса
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    n = 1
-    fun_inside()
-    print(n)
+    # Функция, которая берет объекты класса и выводит их пользователю
+    def main_info(self):
+        print(f'Привет, меня зовут {self.name}, мне {self.age} лет')
 
 
-n = 0
-fun()
-print(n)
+nataly = Human('Nataly', 13)
+nataly.main_info()
+print(nataly.age)
+print(nataly.name)
+
+
+
+
