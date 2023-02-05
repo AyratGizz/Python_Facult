@@ -1,14 +1,17 @@
-def quick_sort(s):
-    if len(s) <= 1:
-        return s
+def quick_sort(array):
+    if len(array) <= 1:
+        return array
     else:
-        elem = s[0]
-        # генерируем список с использованием функции фильтра и всё что меньше elem добавляем влево
-        left = list(filter(lambda x: x < elem, s))
-        # генератор списка который равен elem (обход по всем элементам списка s и добавление i если оно равно elem)
-        center = [i for i in s if i == elem]
-        # генерируем список с использованием функции фильтра и всё что больше elem добавляем вправо
-        right = list(filter(lambda x: x > elem, s))
+        elem = array[0]
+        # генерируем список с использованием функции фильтра
+        # и всё что меньше elem добавляем влево
+        left = list(filter(lambda x: x < elem, array))
+        # генератор списка который равен elem (обход по всем элементам
+        # списка s и добавление i если оно равно elem)
+        center = [i for i in array if i == elem]
+        # генерируем список с использованием функции фильтра и всё
+        # что больше elem добавляем вправо
+        right = list(filter(lambda x: x > elem, array))
 
         # Вызываем рекурсивно левую и правую часть отсортированных списков
         return quick_sort(left) + center + quick_sort(right)
