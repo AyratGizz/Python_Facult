@@ -24,12 +24,12 @@ class Homosapiens():
         """Метод выводит, что экземпляр класса отдыхает дома"""
         print(f'{self.name} отдыхает дома')
 
-    def changed_gender(self):
+    def get_gender(self):
         """Метод класса который выводит пол экземпляра класса"""
-        print(f'{self.name} - {self.gender}')
+        print(f'{self.name} - имеет пол {self.gender}')
 
-    def get_nation(self):
-        """Метод меняет национальность экземпляра класса"""
+    def changed_nation(self):
+        """Метод показывает - хочет ли экземпляра класса сменить национальность"""
         if self.nation == "Русский":
             self.nation = "хочет сменить свою религию на Мусульманин"
             print(f'{self.name} {self.nation}')
@@ -42,8 +42,17 @@ ivan = Homosapiens("Иван", 23, "Мужской", "Русский")
 
 ivan.get_name()
 ivan.adult()
-ivan.get_nation()
+ivan.get_gender()
 ivan.went_to_work()
 ivan.resting_at_home()
-ivan.changed_gender()
+ivan.changed_nation()
+
+ruslan = Homosapiens("Руслан", 15, "Мужской", "Мусульманин")
+ruslan.get_name()
+ruslan.adult()
+ruslan.get_gender()
+ruslan.went_to_work()
+ruslan.resting_at_home()
+ruslan.changed_nation()
+
 
