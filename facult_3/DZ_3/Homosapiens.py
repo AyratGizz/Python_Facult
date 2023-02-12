@@ -48,11 +48,10 @@ ivan.resting_at_home()
 ivan.changed_nation()
 
 ruslan = Homosapiens("Руслан", 15, "Мужской", "Мусульманин")
+
 ruslan.get_name()
 ruslan.adult()
 ruslan.get_gender()
 ruslan.went_to_work()
 ruslan.resting_at_home()
 ruslan.changed_nation()
-
-
